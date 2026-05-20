@@ -74,9 +74,9 @@ end
 % Decide how many data points to be used for each 'genotype' in the
 % simulation
 if isempty(minNum) == 1;
-    % automatically set to 8 if a minimum number of data points wasn't set
+    % automatically set to 15 if a minimum number of data points wasn't set
     % earlier
-    minNum = 8;
+    minNum = 15;
 end
 simulatedData = zeros(minNum,nDraws);
 
@@ -102,7 +102,7 @@ save('simulatedMeans.mat','meansVec');
 figName = 'SimulatedMeans';
 histfit(meansVec(:,1))
 title('Simulated Data')
-xlabel('Mean copulation duration (mins)')
+xlabel('Mean  number of squares entered')
 ylabel('Frequency')
 saveas(gcf, figName, 'png')
 
